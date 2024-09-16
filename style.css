@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1c1c1c;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.player-container {
+    display: flex;
+    gap: 20px;
+}
+
+.player {
+    background-color: #282828;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 300px;
+}
+
+.album-art img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.track-info {
+    margin: 15px 0;
+}
+
+.track-info h2, .track-info h3 {
+    margin: 0;
+}
+
+.controls button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.controls button:hover {
+    color: #1db954;
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+input[type="range"] {
+    width: 100%;
+}
+
+.volume-controls {
+    margin: 10px 0;
+}
+
+.playlist {
+    background-color: #282828;
+    padding: 20px;
+    border-radius: 15px;
+    width: 200px;
+    height: 300px;
+    overflow-y: auto;
+}
+
+.playlist ul {
+    list-style: none;
+    padding: 0;
+}
+
+.playlist li {
+    padding: 10px;
+    background-color: #333;
+    border-radius: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.playlist li:hover {
+    background-color: #444;
+}
+
+.extras button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.extras button:hover {
+    color: #1db954;
+}

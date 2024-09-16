@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Масштабний Аудіоплеєр</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="player-container">
+        <div class="player">
+            <div class="album-art">
+                <img id="album-cover" src="cover-placeholder.jpg" alt="Обкладинка альбому">
+            </div>
+            <div class="track-info">
+                <h2 id="track-title">Назва пісні</h2>
+                <h3 id="track-artist">Артист</h3>
+            </div>
+            <audio id="audio"></audio>
+            <div class="controls">
+                <button id="prev-track">⏮️</button>
+                <button id="play-pause">⏯️</button>
+                <button id="next-track">⏭️</button>
+            </div>
+            <div class="progress-container">
+                <span id="current-time">00:00</span>
+                <input id="progress-bar" type="range" min="0" max="100" value="0">
+                <span id="duration">00:00</span>
+            </div>
+            <div class="volume-controls">
+                <label for="volume-bar">Гучність:</label>
+                <input id="volume-bar" type="range" min="0" max="1" step="0.01" value="1">
+            </div>
+            <div class="extras">
+                <button id="shuffle">🔀</button>
+            </div>
+        </div>
+        <div class="playlist">
+            <ul id="playlist">
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
