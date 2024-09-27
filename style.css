@@ -1,112 +1,33 @@
-body {
-  background-color: #1e1e1e;
-  color: white;
-  font-family: Arial, sans-serif;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
-
-.player-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
-
-.album-cover img {
-  width: 150px;
-  height: 150px;
-  border-radius: 10px;
-}
-
-.audio-info h2 {
-  margin: 10px 0 0 0;
-  font-size: 1.5em;
-}
-
-.controls-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.control-button {
-  background-color: #333;
-  border: none;
-  color: white;
-  padding: 10px;
-  margin: 0 10px;
-  border-radius: 50%;
-  font-size: 1.5em;
-  cursor: pointer;
-}
-
-.control-button:hover {
-  background-color: #555;
-}
-
-#seek-bar {
-  width: 150px;
-  margin: 0 10px;
-}
-
-.volume-control {
-  margin-top: 10px;
-}
-
-input[type="range"] {
-  width: 150px;
-}
-
-.playlist {
-  margin-top: 20px;
-}
-
-.track-button {
-  background-color: #333;
-  color: white;
-  border: none;
-  padding: 10px;
-  margin: 5px;
-  cursor: pointer;
-}
-
-.track-button:hover {
-  background-color: #555;
-}
-
 @media only screen and (max-width: 600px) {
-  .album-cover img {
-    width: 100px;
-    height: 100px;
-  }
+    .album-cover img {
+        width: 150px;
+        height: 150px;
+    }
 
-  .audio-info h2 {
-    font-size: 1.2em;
-  }
+    .audio-info h2 {
+        font-size: 1.5em;
+    }
 
-  .controls-container {
-    flex-direction: column;
-  }
+    .controls-container {
+        flex-direction: column;
+    }
 
-  .control-button {
-    margin: 5px 0;
-    font-size: 1.2em;
-  }
+    .control-button {
+        padding: 10px;
+        font-size: 1.2em;
+        margin: 10px 0;
+    }
 
-  #seek-bar {
-    width: 120px;
-  }
+    #seek-bar {
+        width: 90%;
+    }
 
-  input[type="range"] {
-    width: 120px;
-  }
+    input[type="range"] {
+        width: 90%;
+    }
 
-  .track-button {
-    width: 100%;
-    margin: 5px 0;
-  }
+    .track-button {
+        width: 100%;
+        padding: 10px;
+    }
 }

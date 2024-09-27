@@ -1,0 +1,140 @@
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.player-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.album-cover img {
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.audio-info h2 {
+  margin: 20px 0 10px;
+  font-size: 1.8em;
+  color: #ffdf5d;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.audio-info p {
+  font-size: 1.2em;
+  color: #cccccc;
+  margin: 0;
+}
+
+.controls-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.control-button {
+  background-color: #ffdf5d;
+  border: none;
+  color: #333;
+  padding: 15px;
+  margin: 0 15px;
+  border-radius: 50%;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.control-button:hover {
+  background-color: #ffd700;
+}
+
+#seek-bar {
+  width: 70%;
+  margin: 20px 0;
+  appearance: none;
+  height: 5px;
+  background: #ffdf5d;
+  outline: none;
+  border-radius: 5px;
+}
+
+.volume-control {
+  margin-top: 20px;
+}
+
+input[type="range"] {
+  width: 200px;
+  appearance: none;
+  height: 5px;
+  background: #ffdf5d;
+  border-radius: 5px;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.playlist {
+  margin-top: 30px;
+}
+
+.track-button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 15px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 25px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.track-button:hover {
+  background-color: #ffdf5d;
+  color: #333;
+}
+
+.album-cover {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.track-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.track-buttons button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.track-buttons button:hover {
+  background-color: #555;
+}
