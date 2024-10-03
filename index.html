@@ -1,43 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <link
-    rel="shortcut icon"
-    href="./src/assets/favicon.png"
-    type="image/x-icon" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      rel="shortcut icon"
+      href="./src/assets/favicon.png"
+      type="image/x-icon"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive Audio Player</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="global.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="global.css" />
+  </head>
+  <body>
     <div class="player-container">
-        <div class="album-cover">
-            <img src="./src/assets/cover1.jpg" alt="Album Cover">
-        </div>
-        <div class="audio-info">
-            <h2>Middle Of The Night - Elley Duhe</h2>
-            <p>Now Playing</p>
-        </div>
-        <div class="controls-container">
-            <button class="control-button" id="prev">&#9664;&#9664;</button>
-            <button class="control-button" id="play">&#9654;</button>
-            <button class="control-button" id="next">&#9654;&#9654;</button>
-        </div>
-        <input type="range" id="seek-bar" value="0" min="0" max="100">
-        <div class="volume-control">
-            <label for="volume">Volume:</label>
-            <input type="range" id="volume" value="50" min="0" max="100">
-        </div>
-        
-        <div class="playlist">
-            <button class="track-button" id="track1">Middle Of The Night - Elley Duhe</button>
-            <button class="track-button" id="track2">Track 2 - Artist 2</button>
-            <button class="track-button" id="track3">Track 3 - Artist 3</button>
-        </div>
+      <div class="album-cover">
+        <img src="./src/assets/cover1.jpg" alt="Album Cover" />
+      </div>
+      <div class="audio-info">
+        <h2>Middle Of The Night - Elley Duhe</h2>
+        <p>Now Playing</p>
+      </div>
+      <div class="controls-container">
+        <button class="control-button" id="prev">&#9664;&#9664;</button>
+        <button class="control-button" id="play">&#9654;</button>
+        <button class="control-button" id="next">&#9654;&#9654;</button>
+      </div>
+      <input type="range" id="seek-bar" value="0" min="0" max="100" />
+      <div class="volume-control">
+        <label for="volume">Volume:</label>
+        <input type="range" id="volume" value="50" min="0" max="100" />
+      </div>
+
+      <div class="playlist">
+        <button class="track-button" id="track1">
+          Middle Of The Night - Elley Duhe
+        </button>
+        <button class="track-button" id="track2">
+          The Monster - Eminem feat. Rihanna
+        </button>
+        <button class="track-button" id="track3">
+          Don't Stop the Music - Rihanna
+        </button>
+      </div>
     </div>
 
     <script src="music.js"></script>
-</body>
+  </body>
 </html>

@@ -1,77 +1,85 @@
-const playButton = document.getElementById("play");
-const prevButton = document.getElementById("prev");
-const nextButton = document.getElementById("next");
+document.addEventListener("DOMContentLoaded", () => {
+  const playButton = document.getElementById("play");
+  const prevButton = document.getElementById("prev");
+  const nextButton = document.getElementById("next");
 
-const seekBar = document.getElementById("seek-bar");
-const volumeControl = document.getElementById("volume");
+  const seekBar = document.getElementById("seek-bar");
+  const volumeControl = document.getElementById("volume");
 
-let isPlaying = false;
+  let isPlaying = false;
+  let currentTrackIndex = 0;
+  const audio = new Audio();
 
-playButton.addEventListener("click", () => {
-  if (isPlaying) {
-    playButton.innerHTML = "&#9654;"; // Пауза
-    isPlaying = false;
-  } else {
-    playButton.innerHTML = "&#10074;&#10074;"; // Играет
+  const tracks = [
+    {
+      title: "Middle Of The Night",
+      artist: "Elley Duhe",
+      src: "src/assets/music/music1.mp3",
+      cover: "src/assets//cover1.jpg",
+    },
+    {
+      title: "The Monster",
+      artist: "Eminem feat. Rihanna ",
+      src: "src/assets/music/music3.mp3",
+      cover: "src/assets/cover2.jpg",
+    },
+    {
+      title: "Dont stop the music(R)",
+      artist: "Rihanna",
+      src: "src/assets/music/music2.mp3",
+      cover: "src/assets/cover3.jpg",
+    },
+  ];
+
+  const title = document.querySelector(".audio-info h2");
+  const cover = document.querySelector(".album-cover img");
+
+  function loadTrack(trackIndex) {
+    const track = tracks[trackIndex];
+    title.textContent = `${track.title} - ${track.artist}`;
+    cover.src = track.cover;
+    audio.src = track.src;
+    audio.play();
     isPlaying = true;
+    playButton.innerHTML = "&#10074;&#10074;";
   }
-});
 
-seekBar.addEventListener("input", (e) => {
-  const value = e.target.value;
-  console.log(`Seeking to: ${value}`);
-});
-
-volumeControl.addEventListener("input", (e) => {
-  const volume = e.target.value;
-  console.log(`Volume set to: ${volume}`);
-});
-
-
-const tracks = [
-  {
-    title: "Middle Of The Night",
-    artist: "Elley Duhe",
-    src: "music1.mp3",
-    cover: "cover1.jpg",
-  },
-  {
-    title: "Song 2",
-    artist: "Artist 2",
-    src: "music2.mp3",
-    cover: "cover2.jpg",
-  },
-  {
-    title: "Song 3",
-    artist: "Artist 3",
-    src: "music3.mp3",
-    cover: "cover3.jpg",
-  },
-];
-
-let currentTrackIndex = 0;
-const audio = document.getElementById("audio");
-const title = document.getElementById("track-title");
-const artist = document.getElementById("track-artist");
-const cover = document.getElementById("cover");
-
-function loadTrack(trackIndex) {
-  const track = tracks[trackIndex];
-  title.textContent = track.title;
-  artist.textContent = track.artist;
-  audio.src = track.src;
-  cover.src = track.cover;
-  audio.play();
-}
-
-document.getElementById("prev-btn").addEventListener("click", () => {
-  currentTrackIndex = (currentTrackIndex - 1 + tracks.length) % tracks.length;
   loadTrack(currentTrackIndex);
-});
 
-document.getElementById("next-btn").addEventListener("click", () => {
-  currentTrackIndex = (currentTrackIndex + 1) % tracks.length;
-  loadTrack(currentTrackIndex);
-});
+  playButton.addEventListener("click", () => {
+    if (isPlaying) {
+      audio.pause();
+      playButton.innerHTML = "&#9654;";
+      isPlaying = false;
+    } else {
+      audio.play();
+      playButton.innerHTML = "&#10074;&#10074;";
+      isPlaying = true;
+    }
+  });
 
-loadTrack(currentTrackIndex);
+  prevButton.addEventListener("click", () => {
+    currentTrackIndex = (currentTrackIndex - 1 + tracks.length) % tracks.length;
+    loadTrack(currentTrackIndex);
+  });
+
+  nextButton.addEventListener("click", () => {
+    currentTrackIndex = (currentTrackIndex + 1) % tracks.length;
+    loadTrack(currentTrackIndex);
+  });
+
+  volumeControl.addEventListener("input", (e) => {
+    const volume = e.target.value / 100;
+    audio.volume = volume;
+  });
+
+  seekBar.addEventListener("input", (e) => {
+    const seekTo = (audio.duration * e.target.value) / 100;
+    audio.currentTime = seekTo;
+  });
+
+  audio.addEventListener("timeupdate", () => {
+    const progress = (audio.currentTime / audio.duration) * 100;
+    seekBar.value = progress;
+  });
+});

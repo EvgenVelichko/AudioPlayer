@@ -1,33 +1,33 @@
 @media only screen and (max-width: 600px) {
-    .album-cover img {
-        width: 150px;
-        height: 150px;
-    }
+  .album-cover img {
+    width: 150px;
+    height: 150px;
+  }
 
-    .audio-info h2 {
-        font-size: 1.5em;
-    }
+  .audio-info h2 {
+    font-size: 1.5em;
+  }
 
-    .controls-container {
-        flex-direction: column;
-    }
+  .controls-container {
+    flex-direction: column;
+  }
 
-    .control-button {
-        padding: 10px;
-        font-size: 1.2em;
-        margin: 10px 0;
-    }
+  .control-button {
+    padding: 10px;
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
 
-    #seek-bar {
-        width: 90%;
-    }
+  #seek-bar {
+    width: 90%;
+  }
 
-    input[type="range"] {
-        width: 90%;
-    }
+  input[type="range"] {
+    width: 90%;
+  }
 
-    .track-button {
-        width: 100%;
-        padding: 10px;
-    }
+  .track-button {
+    width: 100%;
+    padding: 10px;
+  }
 }
