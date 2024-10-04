@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "Middle Of The Night",
       artist: "Elley Duhe",
       src: "src/assets/music/music1.mp3",
+<<<<<<< Updated upstream
       cover: "src/assets/cover/cover1.jpg",
     },
     {
@@ -28,6 +29,21 @@ document.addEventListener("DOMContentLoaded", () => {
       artist: " Ed Marquis",
       src: "src/assets/music/music3.mp3",
       cover: "src/assets/cover/cover3.jpg",
+=======
+      cover: "src/assets/cover1.jpg",
+    },
+    {
+      title: "Dont stop the musci(R)",
+      artist: "Rihanna",
+      src: "src/assets/music/music2.mp3",
+      cover: "src/assets/cover3.jpg",
+>>>>>>> Stashed changes
+    },
+    {
+      title: "The Monster",
+      artist: "Eminem feat. Rihanna",
+      src: "src/assets/music/music3.mp3",
+      cover: "src/assets/cover2.jpg",
     },
   ];
 
@@ -39,9 +55,14 @@ document.addEventListener("DOMContentLoaded", () => {
     title.textContent = `${track.title} - ${track.artist}`;
     cover.src = track.cover;
     audio.src = track.src;
+<<<<<<< Updated upstream
     audio.play();
     isPlaying = true;
     playButton.innerHTML = "&#10074;&#10074;"; // Меняем кнопку на паузу
+=======
+    playButton.innerHTML = "&#9654;";
+    isPlaying = false;
+>>>>>>> Stashed changes
   }
 
   loadTrack(currentTrackIndex);
@@ -49,11 +70,19 @@ document.addEventListener("DOMContentLoaded", () => {
   playButton.addEventListener("click", () => {
     if (isPlaying) {
       audio.pause();
+<<<<<<< Updated upstream
       playButton.innerHTML = "&#9654;"; // Меняем на Play
       isPlaying = false;
     } else {
       audio.play();
       playButton.innerHTML = "&#10074;&#10074;"; // Меняем на Pause
+=======
+      playButton.innerHTML = "&#9654;"; 
+      isPlaying = false;
+    } else {
+      audio.play();
+      playButton.innerHTML = "&#10074;&#10074;"; 
+>>>>>>> Stashed changes
       isPlaying = true;
     }
   });
@@ -83,3 +112,13 @@ document.addEventListener("DOMContentLoaded", () => {
     seekBar.value = progress;
   });
 });
+function loadTrack(trackIndex) {
+    const track = tracks[trackIndex];
+    title.textContent = `${track.title} - ${track.artist}`;
+    cover.src = track.cover;
+    audio.src = track.src;
+    playButton.innerHTML = "&#9654;"; 
+    isPlaying = false;
+
+    seekBar.value = 0; 
+}
