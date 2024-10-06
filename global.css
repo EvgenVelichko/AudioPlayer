@@ -138,3 +138,36 @@ input[type="range"]::-webkit-slider-thumb {
 .track-buttons button:hover {
   background-color: #555;
 }
+.track-title {
+    color: #F9C80E; 
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.track-title:hover {
+    color: #FFD700; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+    transform: scale(1.05); 
+}
+
+.track-title::after {
+    content: 'Click to Copy'; 
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+    font-size: 12px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2px 5px;
+    border-radius: 3px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    text-align: center;
+}
+
+.track-title:hover::after {
+    opacity: 1;
+}
