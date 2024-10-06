@@ -26,6 +26,7 @@
         <button class="control-button" id="play">&#9654;</button>
         <button class="control-button" id="next">&#9654;&#9654;</button>
       </div>
+
       <input type="range" id="seek-bar" value="0" min="0" max="100" />
       <div class="volume-control">
         <label for="volume">Volume:</label>
@@ -33,18 +34,19 @@
       </div>
 
       <div class="playlist">
-        <button class="track-button" id="track1">
+        <button class="track-button" id="track1" class="track-title"id="trackTitle">
           Middle Of The Night - Elley Duhe
         </button>
-        <button class="track-button" id="track2">
+        <button class="track-button" id="track2" class="track-title"id="trackTitle">
           The Monster - Eminem feat. Rihanna
         </button>
-        <button class="track-button" id="track3">
+        <button class="track-button" id="track3" class="track-title"id="trackTitle">
           Don't Stop the Music - Rihanna
         </button>
       </div>
     </div>
 
-    <script src="music.js"></script>
+    <script src="./src/service/music.js"></script>
+    <script src="./src/service/copy.js"></script>
   </body>
 </html>
