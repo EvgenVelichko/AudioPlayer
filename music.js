@@ -15,19 +15,19 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "Middle Of The Night",
       artist: "Elley Duhe",
       src: "src/assets/music/music1.mp3",
-      cover: "src/assets//cover1.jpg",
+      cover: "src/assets/images/cover1.jpg",
     },
     {
       title: "The Monster",
       artist: "Eminem feat. Rihanna ",
       src: "src/assets/music/music3.mp3",
-      cover: "src/assets/cover2.jpg",
+      cover: "src/assets/images/cover2.jpg",
     },
     {
       title: "Dont stop the music(R)",
       artist: "Rihanna",
       src: "src/assets/music/music2.mp3",
-      cover: "src/assets/cover3.jpg",
+      cover: "src/assets/images/cover3.jpg",
     },
   ];
 
