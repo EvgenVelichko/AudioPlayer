@@ -3,7 +3,7 @@ function copyToClipboard(text) {
     navigator.clipboard
       .writeText(text)
       .then(() => {
-        alert("Текст скопирован: " + text);
+        // alert("Текст скопирован: " + text);
       })
       .catch((err) => {
         console.error("Ошибка копирования: ", err);
@@ -15,7 +15,7 @@ function copyToClipboard(text) {
     textarea.select();
     document.execCommand("copy");
     document.body.removeChild(textarea);
-    alert("Текст скопирован (с использованием fallback): " + text);
+
   }
 }
 
